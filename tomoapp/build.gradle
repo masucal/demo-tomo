@@ -1,0 +1,50 @@
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.1"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    productFlavors {
+
+        normal {	//　無料版build
+            packageName "jp.tomo.app.normal"
+        }
+        payment {	//　有料版build
+            packageName "jp.tomo.app.payment"
+        }
+    }
+
+    sourceSets {
+
+        main {
+        }
+
+        normal {
+        }
+
+        payment {
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.+'
+    compile "com.android.support:support-v4:19.0.+"
+}
