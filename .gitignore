@@ -25,3 +25,4 @@ build/
 *.iws
 .idea/
 .gradle/
+android/
